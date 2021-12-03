@@ -79,6 +79,7 @@ $app->configure('auth');
 // ]);
 
 $app->routeMiddleware([
+    'cors' => App\Http\Middleware\Cors::class,
     'auth' => App\Http\Middleware\Authenticate::class,
     'client.credentials' => Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
 ]);
